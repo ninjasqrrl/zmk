@@ -11,3 +11,10 @@ Check out the website to learn more: https://zmk.dev/.
 You can also come join our [ZMK Discord Server](https://zmk.dev/community/discord/invite).
 
 To review features, check out the [feature overview](https://zmk.dev/docs/). ZMK is under active development, and new features are listed with the [enhancement label](https://github.com/zmkfirmware/zmk/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) in GitHub. Please feel free to add 👍 to the issue description of any requests to upvote the feature.
+
+How to load a keymap (Example: Sofle)
+cd ~/Projects
+source .zmk_venv/bin/activate
+cd zmk/app/
+west build -p -d build/left -b nice_nano_v2 -- -DSHIELD="sofle_left nice_view_adapter nice_view"
+west build -p -d build/right -b nice_nano_v2 -- -DSHIELD="sofle_right nice_view_adapter nice_view"
